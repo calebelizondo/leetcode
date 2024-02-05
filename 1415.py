@@ -1,14 +1,16 @@
-#This solution did not perform well in runtime, but well in memory
 class Solution(object):
 
     def getHappyString(self, n, k):
-        
-        #given n and k, we can calculate if len(total solutions) < k
-        if (k > 3 ** (n)): 
-            return "" # early return
-        
 
         chars = ['a', 'b', 'c']
 
+        current_string = [chars[0] for i in n]
+        lexical_strings = []
+        
+        #generate lexical strings 
+        #for each index
+        for i in n:
+            for  c in chars:
+                gen_strings = []
 
         
